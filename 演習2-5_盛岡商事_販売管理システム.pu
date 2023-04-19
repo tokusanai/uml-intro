@@ -1,0 +1,13 @@
+@startuml 演習2-5
+rectangle 販売部 {
+actor 田中#DDDDDD;line:black;line.bold;
+actor 鈴木#DDDDDD;line:black;line.bold;
+}
+rectangle 販売管理システム {
+usecase 注文商品の確認
+usecase 出荷情報を登録
+}
+田中 --> 注文商品の確認
+鈴木 --> 出荷情報を登録
+
+@enduml

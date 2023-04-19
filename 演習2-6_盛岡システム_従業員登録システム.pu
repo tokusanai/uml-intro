@@ -1,0 +1,13 @@
+@startuml 演習2-6
+rectangle 従業員登録システム{
+usecase 社員情報登録
+usecase 社員情報参照
+}
+usecase 社員
+usecase 人事担当者
+
+社員 <|-- 人事担当者
+
+社員 --> 社員情報参照
+人事担当者 --> 社員情報登録
+@enduml
