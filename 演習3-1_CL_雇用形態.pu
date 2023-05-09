@@ -1,0 +1,31 @@
+@startuml aaa
+' 従業員抽象クラス
+abstract class 従業員 {
+  -社員番号: int
+  -名前: string
+  -雇用形態: string
+}
+
+
+' 契約社員クラス
+class 契約社員 {
+  -開始日: date
+  -終了日: date
+}
+契約社員 --|> 従業員
+
+' 派遣社員クラス
+class 派遣社員 {
+  -開始日: date
+  -終了日: date
+}
+派遣社員 --|> 従業員
+
+' 正社員クラス
+class 正社員 {
+  -入社日: date
+  -退職日: date
+}
+正社員 --|> 従業員
+
+@enduml
