@@ -1,4 +1,4 @@
-@startuml ラーメン屋
+@startuml 演習4-1_SD_ラーメン屋さんでの注文
 hide footbox
     'メッセージに自動で番号を送る
 autonumber
