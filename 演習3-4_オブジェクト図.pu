@@ -1,0 +1,23 @@
+@startuml オブジェクト図
+left to right direction
+object "<u> 車</u>" as car {
+車種
+}
+object "<u>タイヤ1</u>" as taiya1 {
+メーカー
+}
+object "<u>タイヤ2</u>" as taiya2 {
+メーカー
+}
+object "<u>タイヤ3</u>" as taiya3 {
+メーカー
+}
+object "<u>タイヤ4</u>" as taiya4 {
+メーカー
+}
+
+car -- taiya1
+car -- taiya2
+car -- taiya3
+car -- taiya4
+@enduml

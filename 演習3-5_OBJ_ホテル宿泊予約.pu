@@ -1,0 +1,40 @@
+@startuml ホテル宿泊予約
+object "<u> ホテル</u>" as hotel {
+部屋 
+}
+object "<u>部屋</u>" as room {
+タイプ = シングル
+価格 = 1,100円(1泊)
+キャンペーン価格 = 9000円
+
+}
+object "<u>利用者</u>" as user {
+名前 A,B
+住所
+電話番号
+
+}
+object "<u>予約</u>" as reserve {
+チェックイン日 = 5月3日
+滞在期間 = 2泊
+値段 = 18,000円
+}
+object "<u>301号室</u>" as 301 {
+利用者 = A
+}
+
+object "<u>302号室</u>" as 302 {
+利用者 
+}
+
+object "<u>303号室</u>" as 303 {
+利用者 = B
+}
+
+hotel -- room
+room -- 301
+room -- 302
+room -- 303
+hotel -- user
+reserve -- user
+@enduml

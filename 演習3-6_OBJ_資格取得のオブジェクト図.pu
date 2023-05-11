@@ -1,0 +1,20 @@
+@startuml 資格取得
+left to right direction
+object "<u> 社員1</u>" as em {
+氏名 = 高橋洋平
+}
+object "<u> 社員2</u>" as emp {
+氏名 = 樋口正之
+}
+
+object "<u>資格1</u>" as Qua {
+名称 = 情報処理安全確保支援士
+}
+object "<u>資格2</u>" as qua {
+名称 = LinuC試験Level1
+}
+
+em -- Qua:持つ
+emp -- Qua:持つ
+em -- qua:持つ
+@enduml

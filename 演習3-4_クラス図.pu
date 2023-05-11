@@ -1,0 +1,13 @@
+@startuml クラス図
+left to right direction
+class 車 {
+    - 車種:String
+    - 車メーカー:String
+}
+class タイヤ {
+    - 種類:String
+    - タイヤメーカー:String
+}
+
+車 "1"--"*"タイヤ
+@enduml
