@@ -1,0 +1,17 @@
+@startuml 演習4-2
+actor 利用者
+participant "予約画面" as 画面
+
+利用者 -> 画面: ログイン (非同期)
+activate 利用者
+activate 画面
+利用者 <-- 画面: ログイン応答 (リターン)
+deactivate 画面
+
+利用者 -> 画面: 確認操作呼び出し (同期)
+activate 利用者
+activate 画面
+利用者 <-- 画面: 確認結果 (リターン)
+deactivate 画面
+deactivate 利用者
+@enduml
