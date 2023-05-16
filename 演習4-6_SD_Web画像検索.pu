@@ -1,0 +1,24 @@
+@startuml 演習4-6
+actor ユーザー
+participant ブラウザ
+participant "Web サーバー" as Webサーバー
+participant "画像サーバー" as 画像サーバー
+
+ユーザー -> ブラウザ: 画像リンクボタンをクリック
+activate ブラウザ
+
+ブラウザ -> Webサーバー: 画像ファイル名をリクエスト
+activate Webサーバー
+
+Webサーバー -> 画像サーバー: 画像ファイル検索リクエスト
+activate 画像サーバー
+
+画像サーバー --> Webサーバー: 画像ファイル
+deactivate 画像サーバー
+
+Webサーバー --> ブラウザ: 画像ファイル
+deactivate Webサーバー
+
+ブラウザ -> ブラウザ: 画像ファイルを表示
+deactivate ブラウザ
+@enduml
