@@ -1,0 +1,16 @@
+@startuml 6-4-3
+actor 客 as Client
+participant 自動販売機 as VendingMachine
+participant ボタン as Button
+participant 料金装置 as PaymentDevice
+participant ベンダー装置 as VendorDevice
+
+Client -> VendingMachine: ドリンク選択
+VendingMachine -> Button: ドリンク選択
+Button -> PaymentDevice: お金投入
+PaymentDevice -> VendingMachine: お金投入
+VendingMachine -> VendorDevice: ドリンク受け取り
+VendorDevice -> VendingMachine: ドリンク補充
+VendingMachine -> Client: ドリンク受け取り
+
+@enduml
