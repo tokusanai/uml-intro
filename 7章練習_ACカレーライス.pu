@@ -1,0 +1,20 @@
+@startuml ７章練習
+title カレーライス
+start
+:お米を研ぐ;
+fork
+:野菜の下準備;
+:野菜を切る;
+fork
+:お肉を切る;
+:調理器具の片付け;
+fork again
+:野菜を煮込む;
+:ルーを入れて煮込む;
+end fork
+fork again
+:ご飯を炊く;
+end fork
+:カレーとご飯を盛り付ける;
+stop
+@enduml
