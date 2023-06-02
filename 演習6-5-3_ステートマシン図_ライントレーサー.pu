@@ -4,7 +4,6 @@ scale 800 width
 
 
   [*] --> 電源OFF
-  電源OFF --> 電源ON : 電源SWをONにする
 
 state "ライントレース" as LineTrace {
   state "右旋回" as RightTurn
