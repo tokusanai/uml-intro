@@ -1,0 +1,21 @@
+@startuml 演習6-5-3
+left to right direction
+scale 800 width
+
+
+  [*] --> 電源OFF
+  電源OFF --> 電源ON : 電源SWをONにする
+
+state "ライントレース" as LineTrace {
+  state "右旋回" as RightTurn
+  state "左旋回" as LeftTurn
+  RightTurn --> LeftTurn : 光センサーがラインを外れる
+  LeftTurn --> RightTurn : 光センサーが黒いライン上にある
+  RightTurn --> RightTurn : ラインの右境界線上を進む
+  LeftTurn --> LeftTurn : ラインの右境界線上を進む
+}
+
+電源OFF --> LineTrace : 電源SWをONにする
+LineTrace --> 電源OFF : 電源SWをOFFにする
+
+@enduml

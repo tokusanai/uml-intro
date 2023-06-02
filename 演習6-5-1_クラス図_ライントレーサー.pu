@@ -1,0 +1,10 @@
+@startuml 演習6-5-1
+
+class LineTracer {
+  - lightSensor: LightSensor
+  - rightMotor: RightMotor
+  - leftMotor: LeftMotor
+  - cpu: CPU
+  - powerSwitch: PowerSwitch
+}
+@enduml
