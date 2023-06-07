@@ -1,0 +1,65 @@
+@startuml クラスの表記
+skinparam classAttributeIconSize 0
+skinparam classStereotypeFontStyle underline
+class 注文 {
+    合計
+}
+class 注文明細 {
+    数量
+    小計
+}
+class 割引クーポン {
+    値引き額
+    期限
+}
+class 商品 {
+    名称
+    単価
+}
+class ドリンク {
+    種別
+}
+class カップ {
+    サイズ
+}
+class ハンバーガー {
+    種別
+}
+class ポテト {
+    サイズ
+}
+注文明細 "0..*" -right- "0..1" 割引クーポン
+注文明細 "0..*" -- "1" 商品
+カップ "1..3" -right- "0..*" ドリンク
+フード "1" -right- "1" レシピ
+注文 "1.." o-right- "*" 注文明細
+ハンバーガー "1..*" o-left- "1..*" 材料
+商品 <|-left- ドリンク
+商品 <|-- フード
+フード <|-- ポテト
+フード <|-- ハンバーガー
+材料 <|-- パン
+材料 <|-- 肉
+材料 <|-- 野菜
+材料 <|-- チーズ
+
+
+hide 注文 circle
+hide 注文明細 circle
+hide 割引クーポン circle
+hide カップ circle
+hide ドリンク circle
+hide 商品 circle
+hide フード circle
+hide レシピ circle
+hide カップ circle
+hide 材料 circle
+hide ハンバーガー circle
+hide ポテト circle
+hide 注文 circle
+hide パン circle
+hide 肉 circle
+hide 野菜 circle
+hide チーズ circle
+
+@enduml
